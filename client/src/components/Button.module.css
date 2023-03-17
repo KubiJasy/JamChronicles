@@ -1,0 +1,14 @@
+.btn {
+    background-color: var(--fresh-air);
+    color: var(--blue-zodiac);
+    font-size: var(--font-size-s);
+    font-family: var(--font-family-poppins);
+    border: 1px solid rgba(168,249,255,1);
+    border-radius: 49px;
+    width: 100%;
+    max-width: 178px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 77px;
+}

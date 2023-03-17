@@ -1,0 +1,36 @@
+.container {
+    padding: 0 10%;
+    width: 100%;
+    background-color: var(--gulf-blue);
+    height: 407px;
+}
+
+.container__alignment {
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.footer-content .icons,p {
+    width: 100%;
+}
+.footer-content .icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.footer-content p {
+    text-align: center;
+    color: var(--fresh-air);
+}
+.footer-content a {
+    color: inherit;
+}

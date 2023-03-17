@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+  }
+
+  :root {
+    background-color: #3656B8;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  
+    --black: rgba(0,0,0,1);
+    --gulf-blue: rgba(7,26,84,1);
+    --blue-zodiac: rgba(24,39,84,1);
+    --violet-blue: rgba(53,86,183,1);
+    --fresh-air: rgba(168,249,255,1);
+    --atomic-tangerine: rgba(255,153,102,1);
+    --atomic-tangerine-2: rgba(252,156,108,1);
+    --white: rgba(255,255,255,1);
+
+    --font-size-xs: 1.25rem;
+    --font-size-s: 1.5rem;
+    --font-size-m: 1.88rem;
+    --font-size-l: 2.25rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 4rem;
+    --font-size-xxxl: 6rem;
+
+    --font-family-montserrat: f'Montserrat', sans-serif;
+    --font-family-poppins: 'Poppins', sans-serif;
+   
+  }
+  
+  body {
+    margin: 0;
+    /* overflow-x: hidden; */
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .semi-bold {
+    font-weight: 600;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .monstserrat-s {
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-s);
+  }
+  .monstserrat-xs {
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-xs);
+  }

@@ -1,0 +1,7 @@
+.card {
+    border-radius: 18px;
+    background-color: var(--violet-blue);
+    max-width: 365px;
+    position: relative;
+    height: 100%;
+}
