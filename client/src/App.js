@@ -11,6 +11,9 @@ import learningProgress from "./assets/learningProgress.png";
 import practiceSchedule from "./assets/practiceSchedule.png";
 import frustatedImg from "./assets/frustatedImg.png";
 
+// I have to add routing, button hover states and anchor hover states
+// also see how to refactor the dashboard page to use just a bunch of components
+
 const App = () => {
   return (
     <>
