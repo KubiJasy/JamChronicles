@@ -1,9 +1,10 @@
 import { Outlet } from "react-router";
+import AuthHeader from "./AuthHeader";
 
 const AuthLayout = () => {
   return (
     <>
-      <div>AuthLayout</div>
+      <AuthHeader />
       <Outlet />
     </>
   );

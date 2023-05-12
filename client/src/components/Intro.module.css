@@ -1,0 +1,39 @@
+/* INTRO SECTION */
+.intro-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.intro-left {
+    width: 45%;
+ }
+
+.intro-left h3 {
+    font-family: var(--font-family-poppins);
+    margin: 0 0 52px 0;
+    font-weight: 700;
+    font-size: var(--font-size-l);
+    letter-spacing: 1%;
+    color: var(--white);
+}
+
+.intro-left p {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    color: var(--white);
+    font-size: var(--font-size-m);
+    line-height: 192.5%;
+}
+
+
+.intro-container .intro-background{
+    width: 55%;
+}
+.intro-container .intro-background img{
+    width: 100%;
+    display: block;
+}
+

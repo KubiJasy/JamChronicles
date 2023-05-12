@@ -10,7 +10,7 @@ const LandingHeader = () => {
       <Link to="/">
         <img width="180" height="43" src={logo} alt="JamChronicles Logo" />
       </Link>
-      <Button link={true} navigateTo="/login">
+      <Button className={classes["login__btn"]} link={true} navigateTo="/login">
         Login
       </Button>
     </header>

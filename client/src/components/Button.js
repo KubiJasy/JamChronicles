@@ -4,11 +4,16 @@ import { Link } from "react-router-dom";
 
 const Button = (props) => {
   return props.link ? (
-    <Link to={props.navigateTo} className={classes["btn"]}>
+    <Link
+      to={props.navigateTo}
+      className={`${classes["btn"]} ${props.className}`}
+    >
       {props.children}
     </Link>
   ) : (
-    <button className={classes["btn"]}>{props.children}</button>
+    <button className={`${classes["btn"]} ${props.className}`}>
+      {props.children}
+    </button>
   );
 };
 

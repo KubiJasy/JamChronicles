@@ -8,3 +8,8 @@
     box-shadow: 1px -4px 106px 2px #88c9ce;
     padding: 31.6px 10%;
 }
+
+.login__btn {
+    max-width: 178px;
+    min-height: 77px;
+}

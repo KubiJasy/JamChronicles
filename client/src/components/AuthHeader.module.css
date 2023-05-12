@@ -1,0 +1,10 @@
+.header-container {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gulf-blue);
+    box-shadow: 1px -4px 106px 2px #88c9ce;
+    padding: 31.6px 10%;
+}

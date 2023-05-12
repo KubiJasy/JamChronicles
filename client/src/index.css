@@ -32,6 +32,8 @@
     --atomic-tangerine-2: rgba(252,156,108,1);
     --white: rgba(255,255,255,1);
 
+    --font-size-xxxs: 0.9rem;
+    --font-size-xxs: 1rem;
     --font-size-xs: 1.25rem;
     --font-size-s: 1.5rem;
     --font-size-m: 1.88rem;
@@ -71,4 +73,19 @@
   .monstserrat-xs {
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-xs);
+  }
+
+  .accent-text-orange {
+    font-weight: 700;
+    color: var(--atomic-tangerine);
+  }
+
+  .accent-text-blue{
+    font-weight: 700;
+    color: var(--fresh-air)
+  }
+
+  .accent-text-orange__normal, a.accent-text-orange__normal {
+    font-weight: 400;
+    color: var(--atomic-tangerine)
   }

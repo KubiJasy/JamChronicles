@@ -1,0 +1,64 @@
+/* BENEFITS SECTION */
+
+.benefits {
+    background-color: var(--gulf-blue);
+    padding: 70px 10% 130px 10%;
+    width: 100%;
+}
+
+.benefits h3 {
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    color: var(--white);
+    margin: 0 0 85px 0;
+}
+
+.benefits .card-list {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 430px;
+}
+
+.benefits .card-list__item {
+    width: 25%;
+}
+
+.benefits .card-list img {
+    width: 100%;
+}
+
+.benefits .card-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    color: var(--white);
+    font-size: var(--font-size-s);
+    line-height: 153%;
+    letter-spacing: 7%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.benefits .card-text-1 {
+    position: absolute;
+    padding-left: 5%;
+    bottom: 64px;
+}
+
+.benefits .card-text-2 {
+    text-transform: capitalize;
+    position: absolute;
+    padding-left: 3%;
+    bottom: 75px;
+}
+.benefits .card-text-3 {
+    text-transform: capitalize;
+    position: absolute;
+    padding-left: 5%;
+    bottom: 75px;
+}
+.benefits .card-text-4 {
+    position: absolute;
+    padding-left: 5%;
+    bottom: 70px;
+}

@@ -1,0 +1,51 @@
+/* CALL TO ACTION SECTION */
+
+.call-to-action {
+    width: 100%;
+    padding: 80px 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 61px;
+
+}
+
+.call-to-action__text {
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl);
+    background-color: var(--gulf-blue);
+    min-height: 630px;
+    flex: 0 1 38%;
+    /* width: 42%; */
+    border-radius: 13.51px;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 0 5%;
+}
+
+.call-to-action__text p{
+    text-align: center;
+    color: var(--white);
+}
+
+.call-to-action__right {
+    flex: 0 1 51%;
+    /* width: 49%; */
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+}
+
+.call-to-action__right p{
+    color: var(--white);
+    font-weight: 500;
+}
+.call-to-action__right p{
+    padding-bottom: 2.25rem;
+}
+
+.signup__btn {
+    max-width: 178px;
+    min-height: 77px;
+}
