@@ -1,142 +1,37 @@
-import React from "react";
-import LandingHeader from "./components/LandingHeader";
-import Footer from "./components/Footer";
-import RoundedCard from "./components/RoundedCard";
-import Button from "./components/Button";
-import classes from "./Dashboard.module.css";
-import diaryImg from "./assets/diaryImg.png";
-import manageSongs from "./assets/manageSongs.png";
-import customisedPractice from "./assets/customisedPractice.png";
-import learningProgress from "./assets/learningProgress.png";
-import practiceSchedule from "./assets/practiceSchedule.png";
-import frustatedImg from "./assets/frustatedImg.png";
-
 // I have to add routing, button hover states and anchor hover states
 // also see how to refactor the dashboard page to use just a bunch of components
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Dashboard from "./pages/Dashboard";
+import ComingSoon from "./pages/ComingSoon";
+import ErrorPage from "./pages/ErrorPage";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import AuthLayout from "./components/AuthLayout";
+import AppLayout from "./components/AppLayout";
+
+const router = createBrowserRouter([
+  { path: "/", element: <LandingPage />, errorElement: <ErrorPage /> },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+    ],
+  },
+  {
+    path: "/app",
+    element: <AppLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "soon", element: <ComingSoon /> },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <>
-      <LandingHeader />
-      <section className={classes["intro-container"]}>
-        <div className={classes["intro-left"]}>
-          <h3>
-            Introducing{" "}
-            <span className={classes["accent-text-orange"]}>JamChronicles</span>
-          </h3>
-          <p className={classes["intro-text"]}>
-            The innovative app that will <br /> revolutionize the way you{" "}
-            <span className={classes["accent-text-blue"]}>organize</span> <br />{" "}
-            and <span className={classes["accent-text-blue"]}>learn</span> your
-            music!
-          </p>
-        </div>
-        <div className={classes["intro-background"]}>
-          <img src={diaryImg} alt="" />
-        </div>
-      </section>
-
-      <section className={classes["benefits"]}>
-        <h3>
-          With{" "}
-          <span className={classes["accent-text-orange"]}>JamChronicles</span>,
-          you can ....
-        </h3>
-        <div className={classes["card-list"]}>
-          <div className={classes["card-list__item"]}>
-            <RoundedCard>
-              <img src={manageSongs} alt="" />
-              <p
-                className={`${classes["card-text"]} ${classes["card-text-1"]}`}
-              >
-                Manage All of Your Songs and Musical Pieces in One Place
-              </p>
-            </RoundedCard>
-          </div>
-          <div className={classes["card-list__item"]}>
-            <RoundedCard>
-              <img src={customisedPractice} alt="" />
-              <p
-                className={`${classes["card-text"]} ${classes["card-text-2"]}`}
-              >
-                create customized practice sessions
-              </p>
-            </RoundedCard>
-          </div>
-
-          <div className={classes["card-list__item"]}>
-            <RoundedCard>
-              <img src={learningProgress} alt="" />
-              <p
-                className={`${classes["card-text"]} ${classes["card-text-3"]}`}
-              >
-                track your song learning progress
-              </p>
-            </RoundedCard>
-          </div>
-
-          <div className={classes["card-list__item"]}>
-            <RoundedCard>
-              <img src={practiceSchedule} alt="" />
-              <p
-                className={`${classes["card-text"]} ${classes["card-text-4"]}`}
-              >
-                Plan Your Practice Schedule in Advance
-              </p>
-            </RoundedCard>
-          </div>
-        </div>
-      </section>
-
-      <section className={classes.frustrated}>
-        <img src={frustatedImg} alt="" />
-        <div className={classes["frustrated__left"]}>
-          <p>
-            Say Goodbye to the{" "}
-            <span className={classes["accent-text-blue"]}>Frustration</span> of
-            a{" "}
-            <span className={classes["accent-text-blue"]}>
-              Disorganized Music Repertoire{" "}
-            </span>
-            and an{" "}
-            <span className={classes["accent-text-blue"]}>
-              Aimless Practice Routine
-            </span>{" "}
-          </p>
-          <p>
-            With{" "}
-            <span className={classes["accent-text-orange"]}>JamChronicles</span>
-            , You'll Have Everything You Need to{" "}
-            <span className={classes["accent-text-orange"]}>Level Up</span> in
-            Your Musical Journey
-          </p>
-        </div>
-      </section>
-
-      <section className={classes["call-to-action"]}>
-        <div className={classes["call-to-action__text"]}>
-          <p>
-            Try it now for{" "}
-            <span className={classes["accent-text-orange"]}>FREE!</span>
-          </p>
-        </div>
-        <div className={classes["call-to-action__right"]}>
-          <p>
-            Don't <span className="semi-bold">miss out</span> on the{" "}
-            <span className={classes["accent-text-blue"]}>future</span> of song
-            learning
-          </p>
-          <p>
-            Join{" "}
-            <span className={classes["accent-text-orange"]}>JamChronicles</span>{" "}
-            today and unleash your full musical potential!
-          </p>
-          <Button>Sign Up</Button>
-        </div>
-      </section>
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
