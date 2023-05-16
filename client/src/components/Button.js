@@ -11,7 +11,10 @@ const Button = (props) => {
       {props.children}
     </Link>
   ) : (
-    <button className={`${classes["btn"]} ${props.className}`}>
+    <button
+      type={props.type}
+      className={`${classes["btn"]} ${props.className}`}
+    >
       {props.children}
     </button>
   );

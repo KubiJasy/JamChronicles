@@ -19,19 +19,21 @@ const LoginForm = () => {
               <p className={classes["form-caption__text"]}>
                 Welcome back! Please enter your details.
               </p>
-              <Form>
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Password" />
+              <Form action="/login" method="post">
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
+                <div className={classes["container__submit"]}>
+                  <Button type="submit" className={classes["login__btn"]}>
+                    Login
+                  </Button>
+                  <p className={classes["redirect"]}>
+                    Don't have an account?{" "}
+                    <Link className="accent-text-orange__normal" to="/signup">
+                      Sign Up
+                    </Link>
+                  </p>
+                </div>
               </Form>
-              <div className={classes["container__submit"]}>
-                <Button className={classes["login__btn"]}>Login</Button>
-                <p className={classes["redirect"]}>
-                  Don't have an account?{" "}
-                  <Link className="accent-text-orange__normal" to="/signup">
-                    Sign Up
-                  </Link>
-                </p>
-              </div>
             </div>
           </div>
         </div>

@@ -89,3 +89,11 @@
     font-weight: 400;
     color: var(--atomic-tangerine)
   }
+
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #72aaaf;
+  -webkit-box-shadow: 0 0 0 30px var(--gulf-blue) inset !important;
+  outline: none !important; 
+}

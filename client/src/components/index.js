@@ -6,6 +6,7 @@ import CTA from "./CalltoAction";
 import Footer from "./Footer";
 import AuthHeader from "./AuthHeader";
 import LoginForm from "./LoginForm";
+import ScrollToTop from "./ScrollToTop";
 
 export {
   LandingHeader,
@@ -16,4 +17,5 @@ export {
   Footer,
   AuthHeader,
   LoginForm,
+  ScrollToTop,
 };
