@@ -1,0 +1,31 @@
+.app-header {
+    width: 100%;
+    height: 126px;
+    display: flex;
+    background-color: var(--gulf-blue);
+    box-shadow: 1px -4px 106px 2px #88c9ce;
+    padding: 31.6px 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.app-header__links {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-header__link {
+    text-decoration: none;
+    font-family: var(--font-family-poppins);
+    color: var(--fresh-air);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+}
+
+.app-header__btn {
+    max-width: 178px;
+    min-height: 62px;
+}

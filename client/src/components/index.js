@@ -4,9 +4,13 @@ import Benefits from "./Benefits";
 import HumanTrigger from "./HumanTrigger";
 import CTA from "./CalltoAction";
 import Footer from "./Footer";
-import AuthHeader from "./AuthHeader";
+import AuthLayout from "./AuthLayout";
 import LoginForm from "./LoginForm";
 import ScrollToTop from "./ScrollToTop";
+import AppLayout from "./AppLayout";
+import Welcome from "./Welcome";
+import Calendar from "./Calendar";
+import AppNavigation from "./AppNavigation";
 
 export {
   LandingHeader,
@@ -15,7 +19,11 @@ export {
   HumanTrigger,
   CTA,
   Footer,
-  AuthHeader,
+  AuthLayout,
   LoginForm,
   ScrollToTop,
+  AppLayout,
+  Welcome,
+  Calendar,
+  AppNavigation,
 };

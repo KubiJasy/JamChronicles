@@ -8,15 +8,16 @@ import ComingSoon from "./pages/ComingSoon";
 import ErrorPage from "./pages/ErrorPage";
 import Login, { action as LoginAction } from "./pages/Login";
 import Signup, { action as SignupAction } from "./pages/Signup";
-import AuthLayout from "./components/AuthLayout";
-import AppHeader from "./components/AppHeader";
+import { AuthLayout } from "./components";
 import { ScrollToTop } from "./components";
+import { AppLayout } from "./components";
 
 const router = createBrowserRouter([
   {
     element: <ScrollToTop />,
+    errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <LandingPage />, errorElement: <ErrorPage /> },
+      { path: "/", element: <LandingPage /> },
       {
         element: <AuthLayout />,
         children: [
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/app",
-        element: <AppHeader />,
+        element: <AppLayout />,
         children: [
           { index: true, element: <Dashboard /> },
           { path: "soon", element: <ComingSoon /> },

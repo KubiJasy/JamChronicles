@@ -1,0 +1,24 @@
+.container {
+    position: absolute;
+    top: calc(var(--overlay--height) + var(--overlay-top));
+    background-color: rgba(173, 249, 255, 0.8);
+    width: 100%;
+    min-height: 270px;
+    padding-left: 25px;
+    padding-bottom: 50px;
+}
+
+.quote {
+    margin-top: 80px;
+    font-family: var(--font-family-oleo);
+    line-height: 125%;
+    font-size: var(--font-size-l);
+    text-align: center;
+}
+
+
+.quote__author {
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+}

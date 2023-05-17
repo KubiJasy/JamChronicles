@@ -1,0 +1,28 @@
+.container {
+    position: absolute;
+    top: var(--overlay-top);
+    left: 0;
+    background-color: rgba(173, 249, 255, 0.8);
+    width: 80%;
+    padding-top: 90px;
+    padding-left: 25px;
+    height: var(--overlay--height);
+}
+
+.greeting {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 125%;
+}
+
+.greeting__intro {
+    font-family: var(--font-family-montserrat);
+    font-weight: 800;
+    font-size: var(--font-size-xxl);
+    letter-spacing: 0.07em;
+}
+
+.greeting__name {
+    color: #DA7644;
+}

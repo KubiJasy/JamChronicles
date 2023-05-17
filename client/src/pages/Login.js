@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 import { LoginForm } from "../components";
 import { Footer } from "../components";
 
@@ -24,5 +25,5 @@ export const action = async ({ request }) => {
   // send POST request to the backend
   // handle ok response by redirecting to /app and saving the JWS token in either localStorage or in a cookie
   // handle errors by throwing them and handling them in the default error page
-  return null;
+  return redirect("/app");
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Nunito+Sans:wght@600;900&family=Oleo+Script&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
 
 *, ::before, ::after {
     margin: 0;
@@ -25,6 +25,7 @@
   
     --black: rgba(0,0,0,1);
     --gulf-blue: rgba(7,26,84,1);
+    --gulf-blue-dark: rgb(5, 19, 61);
     --blue-zodiac: rgba(24,39,84,1);
     --violet-blue: rgba(53,86,183,1);
     --fresh-air: rgba(168,249,255,1);
@@ -42,8 +43,12 @@
     --font-size-xxl: 4rem;
     --font-size-xxxl: 6rem;
 
-    --font-family-montserrat: f'Montserrat', sans-serif;
+    --font-family-montserrat: 'Montserrat', sans-serif;
     --font-family-poppins: 'Poppins', sans-serif;
+    --font-family-oleo: 'Oleo Script', cursive;
+
+    --overlay--height: 270px;
+    --overlay-top: 150px;
    
   }
   
@@ -79,6 +84,10 @@
     font-weight: 700;
     color: var(--atomic-tangerine);
   }
+  .accent-text-orange-semibold {
+    font-weight: 600;
+    color: var(--atomic-tangerine);
+  }
 
   .accent-text-blue{
     font-weight: 700;
@@ -96,4 +105,27 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #72aaaf;
   -webkit-box-shadow: 0 0 0 30px var(--gulf-blue) inset !important;
   outline: none !important; 
+}
+
+/* *************************CUSTOM SCROLLBAR******************** */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 70px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

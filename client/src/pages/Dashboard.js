@@ -1,7 +1,17 @@
-import React from "react";
+import { Welcome, Calendar, AppNavigation, Footer } from "../components";
+import classes from "./Dashboard.module.css";
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <>
+      <main className={classes["dashboard-main"]}>
+        <Welcome />
+        <Calendar />
+        <AppNavigation />
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default Dashboard;
