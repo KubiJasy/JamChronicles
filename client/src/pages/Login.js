@@ -26,4 +26,5 @@ export const action = async ({ request }) => {
   // handle ok response by redirecting to /app and saving the JWS token in either localStorage or in a cookie
   // handle errors by throwing them and handling them in the default error page
   return redirect("/app");
+  // return null;
 };

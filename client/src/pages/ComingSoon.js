@@ -12,13 +12,13 @@ const ComingSoon = () => {
           fontFamily: "Nunito Sans, sans-serif",
           color: "var(--fresh-air)",
           textAlign: "center",
-          fontSize: "var(--font-size-xxl)",
+          fontSize: "var(--font-size-xl)",
         }}
       >
         <img src={constructionSVG} alt="under construction" />
         <p>This page is under construction.</p>
         <p>
-          Come back later when the{" "}
+          Come back later when this{" "}
           <span
             style={{
               fontWeight: "400",
@@ -27,7 +27,7 @@ const ComingSoon = () => {
           >
             “room”
           </span>{" "}
-          is completed.
+          has been completed.
         </p>
         <p>
           Back to{" "}

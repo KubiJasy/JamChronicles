@@ -1,17 +1,31 @@
 .btn {
-    background-color: var(--fresh-air);
-    color: var(--blue-zodiac);
-    font-size: var(--font-size-s);
-    font-family: var(--font-family-poppins);
-    font-weight: 600;
-    border: 1px solid rgba(168,249,255,1);
-    border-radius: 49px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--fresh-air);
+  color: var(--blue-zodiac);
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-poppins);
+  font-weight: 600;
+  border: 1px solid rgba(168, 249, 255, 1);
+  border-radius: 49px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--blue-zodiac);
+  color: var(--fresh-air);
+  border: 1px solid rgba(168, 249, 255, 1);
+}
+
+.btn:disabled {
+  background-color: rgb(117, 160, 163);
+  color: rgb(97, 97, 97);
+  border: 1px solid var(--fresh-air);
+  cursor: default;
 }
 
 a.btn {
-    text-decoration: none;
+  text-decoration: none;
 }

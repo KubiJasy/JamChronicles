@@ -1,5 +1,6 @@
 import SignupForm from "../components/SignupForm";
 import { Footer } from "../components";
+import { redirect } from "react-router-dom";
 
 const Signup = () => {
   return (
@@ -23,5 +24,5 @@ export const action = async ({ request }) => {
 
   console.log(submission);
 
-  return null;
+  return redirect("/login");
 };

@@ -1,73 +1,111 @@
 .main {
-    width: 80%;
-    margin: 430px auto;
-    font-size: var(--font-family-poppins);
+  width: 80%;
+  margin: 430px auto;
+  font-family: var(--font-family-poppins);
 }
 
 .main__form {
-    display: flex;
+  display: flex;
 }
 
 .auth-stock-image {
-    flex: 0 1 60%;
+  flex: 0 1 60%;
 }
 
 .form-components {
-    flex: 1 1 33%;
-    margin-top: 180px;
+  flex: 1 1 33%;
+  margin-top: 180px;
 }
 
 .form-caption {
-    color: var(--fresh-air);
-    font-size: var(--font-size-m);
-    font-weight: 600;
-    margin-bottom: 15px;
+  color: var(--fresh-air);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .form-caption__text {
-    color: #72aaaf;
-    font-size: var(--font-size-xxs);
-    margin-bottom: 60px;
+  color: #72aaaf;
+  font-size: var(--font-size-xxs);
+  margin-bottom: 60px;
 }
 
 .login-form {
-    max-width: 400px;
-    margin: auto;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-control {
+  margin-bottom: 60px;
+}
+
+.form-control__error {
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: var(--font-size-xxxs);
+  color: #ff5c5c;
 }
 
 .login-form input {
-    width: 100%;
-    margin-bottom: 60px;
-    padding: 12px 10px;
-    border: transparent;
-    border-bottom: 2px solid #72aaaf;
-    background-color: var(--gulf-blue);
+  width: 100%;
+  padding: 12px 10px;
+  border: transparent;
+  border-bottom: 2px solid #72aaaf;
+  background-color: var(--gulf-blue);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxs);
+  color: #72aaaf;
 }
 
 .login-form input::placeholder {
-    color: #72aaaf;
-    font-size: var(--font-size-xxs);
-    font-family: var(--font-family-montserrat);
-    font-weight: 500;
+  color: #72aaaf;
+  font-size: var(--font-size-xxs);
+  font-family: var(--font-family-montserrat);
+  font-weight: 500;
+}
+
+input.valid:focus,
+input.invalid:focus {
+  outline: none;
+}
+
+input.valid:focus {
+  border-bottom: 4px solid #03f0c8;
+  background-color: rgba(3, 240, 200, 0.4);
+}
+
+input.invalid:focus {
+  border-bottom: 4px solid #ff5c5c;
+  background-color: rgba(255, 92, 92, 0.4);
+}
+
+input.valid {
+  border-bottom: 3px solid #03f0c8;
+  background-color: rgba(3, 240, 200, 0.3);
+}
+
+input.invalid {
+  border-bottom: 3px solid #ff5c5c;
+  background-color: rgba(255, 92, 92, 0.3);
 }
 
 .container__submit {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .login__btn {
-    margin-top: 25px;
-    max-width: 250px;
-    min-height: 45px;
-    font-size: var(--font-size-xs);
+  margin-top: 25px;
+  max-width: 250px;
+  min-height: 45px;
+  font-size: var(--font-size-xs);
 }
 
 .redirect {
-    font-size: var(--font-size-xxxs);
-    color: #72aaaf;
-    text-align: center;
-    margin-top: 18px;
+  font-size: var(--font-size-xxxs);
+  color: #72aaaf;
+  text-align: center;
+  margin-top: 18px;
 }
