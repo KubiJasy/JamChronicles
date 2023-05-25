@@ -1,6 +1,11 @@
 import { constructionSVG } from "../assets";
 import { Link } from "react-router-dom";
 import { Footer } from "../components";
+import checkLogin from "../utils/checkLogin";
+
+import store from "../stateManagement/redux/store";
+
+const { authUser } = store.getState();
 
 const ComingSoon = () => {
   return (
@@ -54,3 +59,8 @@ const ComingSoon = () => {
 };
 
 export default ComingSoon;
+
+export const loader = async () => {
+  await checkLogin(authUser);
+  return null;
+};

@@ -13,6 +13,7 @@ const Button = (props) => {
   ) : (
     <button
       type={props.type}
+      onClick={props.onClick}
       disabled={props.disabled}
       className={`${classes["btn"]} ${props.className}`}
     >

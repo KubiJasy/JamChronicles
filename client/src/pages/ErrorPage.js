@@ -3,9 +3,12 @@ import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import classes from "./ErrorPage.module.css";
 import AuthHeader from "../components/AuthHeader";
 import { Footer } from "../components";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
+  const error = useRouteError();
+  console.error("Error message: ", error.message);
+  console.error("Stack trace: ", error.stack);
   return (
     <>
       <AuthHeader />

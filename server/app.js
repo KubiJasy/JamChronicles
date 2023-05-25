@@ -1,5 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
+import corsOptions from "./config/corsOptions.js";
 import connectDB from "./db/connect.js";
 import dotenv from "dotenv";
 import routes from "./routes/index.js";
@@ -9,6 +11,9 @@ dotenv.config();
 // currently, all route controller responses (return) values should be an array, the data as the first element and the statusCode as the second. Any errors thrown should be thrown using the custom API error class.
 
 const app = express();
+
+// CORS
+app.use(cors(corsOptions));
 
 // General Middleware
 app.use(express.json());

@@ -10,13 +10,13 @@ dotenv.config();
 // Helper functions
 const generateAccessToken = (userID) => {
   return jwt.sign({ userID }, process.env.ACCESS_TOKEN_KEY, {
-    expiresIn: "10m",
+    expiresIn: "10s",
   });
 };
 
 const generateRefreshToken = (userID, refreshTokenID) => {
   return jwt.sign({ userID, refreshTokenID }, process.env.REFRESH_TOKEN_KEY, {
-    expiresIn: "30d",
+    expiresIn: "60s",
   });
 };
 
@@ -38,7 +38,7 @@ const validateRefreshToken = async (encRefreshToken) => {
 };
 
 // @desc
-// @route
+// @route - auth/register
 // @access
 const createUser = errorHandlerWrapper(
   withTransaction(async (req, res, next, session) => {
@@ -114,23 +114,23 @@ const regenerateAccessToken = errorHandlerWrapper(async (req, res, next) => {
   const encRefreshToken = req.cookies.jwt;
   const { userID } = await validateRefreshToken(encRefreshToken);
 
+  const { firstName } = await User.findOne({ _id: userID });
+
   // if all clear, generate new access token and send back in response
   const accessToken = generateAccessToken(userID);
 
-  return [{ userID, accessToken }];
+  return [{ user: { userID, firstName }, accessToken }];
 });
 
 // @desc
-// @route
+// @route - /auth/logout
 // @access
 const logout = errorHandlerWrapper(
   withTransaction(async (req, res, next, session) => {
     // check validity of refresh token
     if (!req.cookies?.jwt) throw new CustomAPIError(204, "No content");
     const encRefreshToken = req.cookies.jwt;
-    const { userID, refreshTokenID } = await validateRefreshToken(
-      encRefreshToken
-    );
+    const { userID, refreshTokenID } = jwt.decode(encRefreshToken);
     // delete refresh token
     await RefreshToken.deleteOne(
       { _id: refreshTokenID, owner: userID },

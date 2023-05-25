@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const errorHandler = (err, req, res, next) => {
-  const errStatus = err.statusCode || 500;
+  let errStatus = err.statusCode || 500;
+  if (err.message === "jwt expired") errStatus = 401;
   const errMsg = err.message || "Something went wrong";
   res.status(errStatus).json({
     success: false,
